@@ -139,7 +139,6 @@ int readDip() {
 	value |= !!(PIN & 1 << DIP_A_POS) << 0;
 	value |= !!(PIN & 1 << DIP_B_POS) << 1;
 	value |= !!(PIN & 1 << DIP_C_POS) << 2;
-	Serial.print(value);
 	return value;
 }
 
