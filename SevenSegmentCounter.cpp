@@ -37,6 +37,8 @@ void shiftRegisterClock();
 void storageRegisterClock();
 void tick();
 void fillCounter();
+void milliLoop();
+void microLoop();
 
 int main() {
 
@@ -75,10 +77,10 @@ int main() {
 	// Starting loop with milli or micro delay
 	switch (delayType) {
 	case MILLIS:
-		void milliLoop();
+		milliLoop();
 		break;
 	case MICROS:
-		void microLoop();
+		microLoop();
 		break;
 	default:
 		break;
