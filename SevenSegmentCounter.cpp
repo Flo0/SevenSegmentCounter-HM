@@ -137,11 +137,7 @@ void fillCounter() {
 
 // Reads DIP_A as LSB and DIP_C as MSB
 int readDip() {
-	int value = 0;
-	value |= !!(PIN & 1 << DIP_A_POS) << 0;
-	value |= !!(PIN & 1 << DIP_B_POS) << 1;
-	value |= !!(PIN & 1 << DIP_C_POS) << 2;
-	return value;
+	return 0 | !!(PIN & 1 << DIP_A_POS) << 0 | !!(PIN & 1 << DIP_B_POS) << 1 | !!(PIN & 1 << DIP_C_POS) << 2;
 }
 
 // Writes 8 Bit data to shift register
